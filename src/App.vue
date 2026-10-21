@@ -19,7 +19,7 @@ const count=computed(()=>members.value.filter(m=>m.active).length)
 const totalPages=computed(()=>Math.max(1,Math.ceil(filtered.value.length/5)))
 const visible=computed(()=>filtered.value.slice((current.value-1)*5,current.value*5))
 const filteredLogs=computed(()=>logs.value.filter(l=>(l.action+l.target+'陳維克').includes(logQuery.value)))
-const subtitles={'總覽':'掌握這個小圈子的近況。','會員管理':'照顧每一位成員，讓相聚更簡單。','加入管理':'一起確認最適合親友的加入方式。','分類管理':'讓每筆日常，都有合適的位置。','操作紀錄':'每一次調整，都有跡可循。'}
+const subtitles={'總覽':'掌握這個小圈子的近況。Test','會員管理':'照顧每一位成員，讓相聚更簡單。','加入管理':'一起確認最適合親友的加入方式。','分類管理':'讓每筆日常，都有合適的位置。','操作紀錄':'每一次調整，都有跡可循。'}
 let timer
 function note(s){toast.value=s;clearTimeout(timer);timer=setTimeout(()=>toast.value='',3500)}
 function go(p){page.value=p;mobile.value=false}
